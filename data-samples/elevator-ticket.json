@@ -1,0 +1,33 @@
+{
+    "id": "<ticket-id>",
+    "elevator-id": "<elevator-id",
+    "datetime": "<datetime>",
+    "load":
+    {
+        "crop-class": "crop-class (e.g. sww, srw, sws, srs, hrw, hrs, etc)",
+        "gross": "<gross-weight>",
+        "tare": "<tare-weight>",
+        "net": "<net-weight",
+        "grower":
+        {
+            "id": "<grower-id>",
+            "grower-field-id": "<grower-field-id"
+        },
+        "truck":
+        {
+            "license": "<truck-license>",
+            "bol-number": "<bill of lading number>",
+            "driver":
+            {
+                "fname": "<drivers first name>",
+                "lname": "<drivers last name>"
+            }
+        },
+        "quality":
+        {
+            "moisture": "decimal value",
+            "protein": "decimal value",
+            "bushel-weight": "decimal value"
+        }            
+    }
+}
