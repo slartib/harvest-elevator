@@ -1,0 +1,936 @@
+create (:Grower {id: 1, name: 'MFarms', city: 'Palouse', state: 'WA', fsa: 4422}) -[:Contact {type: 'Primary'}]-> (:People {id: 1, name: 'Mark Jones', fname: 'Mark', lname: 'Jones'});
+create (:Grower {id: 2, name: 'DFarms', city: 'Pullman', state: 'WA', fsa: 4782}) -[:Contact {type: 'Primary'}]-> (:People {id: 2, name: 'Doug Smith', fname: 'Doug', lname: 'Smith'});
+create (:Grower {id: 3, name: 'GFarms', city: 'Walla Walla', state: 'WA', fsa: 5342}) -[:Contact {type: 'Primary'}]-> (:People {id: 3, name: 'George Jackson', fname: 'George', lname: 'Jackson'});
+create (:Grower {id: 4, name: 'BFarms', city: 'Albion', state: 'WA', fsa: 2348}) -[:Contact {type: 'Primary'}]-> (:People {id: 4, name: 'Bob Larson', fname: 'Bob', lname: 'Larson'});
+create (:Grower {id: 5, name: 'SFarms', city: 'Colfax', state: 'WA', fsa: 3258}) -[:Contact {type: 'Primary'}]-> (:People {id: 5, name: 'Sam Mitchell', fname: 'Sam', lname: 'Mitchell'});
+create (:Grower {id: 6, name: 'NFarms', city: 'Steptoe', state: 'WA', fsa: 8752}) -[:Contact {type: 'Primary'}]-> (:People {id: 6, name: 'Ned Edwards', fname: 'Ned', lname: 'Edwards'});
+create (:Grower {id: 7, name: 'JFarms', city: 'Dusty', state: 'WA', fsa: 2342}) -[:Contact {type: 'Primary'}]-> (:People {id: 7, name: 'Jim Johnson', fname: 'Jim', lname: 'Johnson'});
+create (:Grower {id: 8, name: 'TFarms', city: 'Garfield', state: 'WA', fsa: 1934}) -[:Contact {type: 'Primary'}]-> (:People {id: 8, name: 'Ted Randall', fname: 'Ted', lname: 'Randall'});
+create (:Grower {id: 9, name: 'CFarms', city: 'Pullman', state: 'WA, fsa: 9983}) -[:Contact {type: 'Primary'}]-> (:People {id: 9, name: 'Carl Maxus', fname: 'Carl', lname: 'Maxus'});
+create (:Grower {id: 10, name: 'RFarms', city: 'Pullman', state: 'WA', fsa: 7883}) -[:Contact {type: 'Primary'}]-> (:People {id: 10, name: 'Randy Charles', fname: 'Randy', lname: 'Charles'});
+
+create (:Field {id: 1, name:'MField1', size: 300, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 2, name:'MField2', size: 640, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 3, name:'MField3', size: 563, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 4, name:'MField4', size: 852, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 5, name:'MField5', size: 1243, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 6, name:'MField6', size: 750, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+
+create (:Field {id: 7, name:'DField1', size: 400, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 8, name:'DField2', size: 740, size_unit: 'acres', nearest_city: 'Pullman', state:'WA'});
+create (:Field {id: 9, name:'DField3', size: 863, size_unit: 'acres', nearest_city: 'Garfield', state:'WA'});
+create (:Field {id: 10, name:'DField4', size: 952, size_unit: 'acres', nearest_city: 'Farmington', state:'WA'});
+create (:Field {id: 11, name:'DField5', size: 2243, size_unit: 'acres', nearest_city: 'Albion', state:'WA'});
+create (:Field {id: 12, name:'DField6', size: 650, size_unit: 'acres', nearest_city: 'Colfax', state:'WA'});
+
+create (:Field {id: 13, name:'GField1', size: 200, size_unit: 'acres', nearest_city: 'Albion', state:'WA'});
+create (:Field {id: 14, name:'GField2', size: 340, size_unit: 'acres', nearest_city: 'Colfax', state:'WA'});
+create (:Field {id: 15, name:'GField3', size: 963, size_unit: 'acres', nearest_city: 'Uniontown', state:'WA'});
+create (:Field {id: 16, name:'GField4', size: 552, size_unit: 'acres', nearest_city: 'Farmington', state:'WA'});
+create (:Field {id: 17, name:'GField5', size: 243, size_unit: 'acres', nearest_city: 'Garfield', state:'WA'});
+create (:Field {id: 18, name:'GField6', size: 850, size_unit: 'acres', nearest_city: 'Endicott', state:'WA'});
+
+create (:Field {id: 19, name:'BField1', size: 350, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 20, name:'BField2', size: 620, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 21, name:'BField3', size: 513, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 22, name:'BField4', size: 872, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 23, name:'BField5', size: 1343, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 24, name:'BField6', size: 780, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+
+create (:Field {id: 25, name:'NField1', size: 450, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 26, name:'NField2', size: 730, size_unit: 'acres', nearest_city: 'Pullman', state:'WA'});
+create (:Field {id: 27, name:'NField3', size: 823, size_unit: 'acres', nearest_city: 'Garfield', state:'WA'});
+create (:Field {id: 28, name:'NField4', size: 932, size_unit: 'acres', nearest_city: 'Farmington', state:'WA'});
+create (:Field {id: 29, name:'NField5', size: 2043, size_unit: 'acres', nearest_city: 'Albion', state:'WA'});
+create (:Field {id: 30, name:'NField6', size: 600, size_unit: 'acres', nearest_city: 'Colfax', state:'WA'});
+
+create (:Field {id: 31, name:'JField1', size: 250, size_unit: 'acres', nearest_city: 'Albion', state:'WA'});
+create (:Field {id: 32, name:'JField2', size: 310, size_unit: 'acres', nearest_city: 'Colfax', state:'WA'});
+create (:Field {id: 33, name:'JField3', size: 993, size_unit: 'acres', nearest_city: 'Uniontown', state:'WA'});
+create (:Field {id: 34, name:'JField4', size: 592, size_unit: 'acres', nearest_city: 'Farmington', state:'WA'});
+create (:Field {id: 35, name:'JField5', size: 273, size_unit: 'acres', nearest_city: 'Garfield', state:'WA'});
+create (:Field {id: 36, name:'JField6', size: 890, size_unit: 'acres', nearest_city: 'Endicott', state:'WA'});
+
+create (:Field {id: 37, name:'TField1', size: 370, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 38, name:'TField2', size: 680, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 39, name:'TField3', size: 593, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 40, name:'TField4', size: 842, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 41, name:'TField5', size: 1543, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 42, name:'TField6', size: 790, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+
+create (:Field {id: 43, name:'SField1', size: 470, size_unit: 'acres', nearest_city: 'Palouse', state:'WA'});
+create (:Field {id: 44, name:'SField2', size: 720, size_unit: 'acres', nearest_city: 'Pullman', state:'WA'});
+create (:Field {id: 45, name:'SField3', size: 873, size_unit: 'acres', nearest_city: 'Garfield', state:'WA'});
+create (:Field {id: 46, name:'SField4', size: 912, size_unit: 'acres', nearest_city: 'Farmington', state:'WA'});
+create (:Field {id: 47, name:'SField5', size: 143, size_unit: 'acres', nearest_city: 'Albion', state:'WA'});
+create (:Field {id: 48, name:'SField6', size: 250, size_unit: 'acres', nearest_city: 'Colfax', state:'WA'});
+
+create (:Field {id: 49, name:'RField1', size: 220, size_unit: 'acres', nearest_city: 'Albion', state:'WA'});
+create (:Field {id: 50, name:'RField2', size: 360, size_unit: 'acres', nearest_city: 'Colfax', state:'WA'});
+create (:Field {id: 51, name:'RField3', size: 923, size_unit: 'acres', nearest_city: 'Uniontown', state:'WA'});
+create (:Field {id: 52, name:'RField4', size: 512, size_unit: 'acres', nearest_city: 'Farmington', state:'WA'});
+create (:Field {id: 53, name:'RField5', size: 213, size_unit: 'acres', nearest_city: 'Garfield', state:'WA'});
+create (:Field {id: 54, name:'RField6', size: 810, size_unit: 'acres', nearest_city: 'Endicott', state:'WA'});
+
+create (:Field {id: 55, name:'CField1', size: 280, size_unit: 'acres', nearest_city: 'Albion', state:'WA'});
+create (:Field {id: 56, name:'CField2', size: 380, size_unit: 'acres', nearest_city: 'Colfax', state:'WA'});
+create (:Field {id: 57, name:'CField3', size: 933, size_unit: 'acres', nearest_city: 'Uniontown', state:'WA'});
+create (:Field {id: 58, name:'CField4', size: 532, size_unit: 'acres', nearest_city: 'Farmington', state:'WA'});
+create (:Field {id: 59, name:'CField5', size: 223, size_unit: 'acres', nearest_city: 'Garfield', state:'WA'});
+create (:Field {id: 60, name:'CField6', size: 830, size_unit: 'acres', nearest_city: 'Endicott', state:'WA'});
+
+match (g:Grower), (f:Field)
+where f.name starts with substring(g.name, 0, 2)
+create (g)-[r:Farms {year: 2022, name: g.name + '-[Farms]->' + f.name}]->(f)
+return g, f, r
+
+create (:Harvester {id: 1, name:'MFarms_Harvest'});
+create (:Harvester {id: 2, name:'DFarms_Harvest'});
+create (:Harvester {id: 3, name:'GFarms_Harvest'});
+create (:Harvester {id: 4, name:'BFarms_Harvest'});
+create (:Harvester {id: 5, name:'SCustom_Harvest'});
+create (:Harvester {id: 6, name:'NCustom_Harvest'});
+create (:Harvester {id: 7, name:'JFarms_Harvest'});
+create (:Harvester {id: 8, name:'TCustom_Harvest'});
+create (:Harvester {id: 9, name:'CFarms_Harvest'});
+create (:Harvester {id: 10, name:'RFarms_Harvest'});
+
+match (g:Grower), (h:Harvester)
+where g.id = 1 and h.id = 1
+create (h)-[r:HarvestsFor {year: 2022, name: h.name + '-[HarvestsFor]->' + g.name}]->(g)
+return g, h, r ;
+match (g:Grower), (h:Harvester)
+where g.id = 1 and h.id = 1
+create (g)-[r:Owns {name: g.name + '-[Owns]->' + h.name}]->(h)
+return g, h, r;
+
+match (g:Grower), (h:Harvester)
+where g.id = 2 and h.id = 2
+create (h)-[r:HarvestsFor {year: 2022, name: h.name + '-[HarvestsFor]->' + g.name}]->(g)
+return g, h, r ;
+match (g:Grower), (h:Harvester)
+where g.id = 2 and h.id = 5
+create (h)-[r:HarvestsFor {year: 2022, name: h.name + '-[HarvestsFor]->' + g.name}]->(g)
+return g, h, r ;
+match (g:Grower), (h:Harvester)
+where g.id = 2 and h.id = 2
+create (g)-[r:Owns {name: g.name + '-[Owns]->' + h.name}]->(h)
+return g, h, r;
+
+match (g:Grower), (h:Harvester)
+where g.id = 3 and h.id = 3
+create (h)-[r:HarvestsFor {year: 2022, name: h.name + '-[HarvestsFor]->' + g.name}]->(g)
+return g, h, r ;
+match (g:Grower), (h:Harvester)
+where g.id = 3 and h.id = 3
+create (g)-[r:Owns {name: g.name + '-[Owns]->' + h.name}]->(h)
+return g, h, r;
+
+match (g:Grower), (h:Harvester)
+where g.id = 4 and h.id = 4
+create (h)-[r:HarvestsFor {year: 2022, name: h.name + '-[HarvestsFor]->' + g.name}]->(g)
+return g, h, r ;
+match (g:Grower), (h:Harvester)
+where g.id = 4 and h.id = 8
+create (h)-[r:HarvestsFor {year: 2022, name: h.name + '-[HarvestsFor]->' + g.name}]->(g)
+return g, h, r ;
+match (g:Grower), (h:Harvester)
+where g.id = 4 and h.id = 4
+create (g)-[r:Owns {name: g.name + '-[Owns]->' + h.name}]->(h)
+return g, h, r;
+
+match (g:Grower), (h:Harvester)
+where g.id = 5 and h.id = 6
+create (h)-[r:HarvestsFor {year: 2022, name: h.name + '-[HarvestsFor]->' + g.name}]->(g)
+return g, h, r ;
+
+
+match (g:Grower), (h:Harvester)
+where g.id = 6 and h.id = 1
+create (h)-[r:HarvestsFor {year: 2022, name: h.name + '-[HarvestsFor]->' + g.name}]->(g)
+return g, h, r ;
+
+match (g:Grower), (h:Harvester)
+where g.id = 7 and h.id = 7
+create (h)-[r:HarvestsFor {year: 2022, name: h.name + '-[HarvestsFor]->' + g.name}]->(g)
+return g, h, r ;
+match (g:Grower), (h:Harvester)
+where g.id = 7 and h.id = 7
+create (g)-[r:Owns {name: g.name + '-[Owns]->' + h.name}]->(h)
+return g, h, r;
+
+match (g:Grower), (h:Harvester)
+where g.id = 8 and h.id = 8
+create (h)-[r:HarvestsFor {year: 2022, name: h.name + '-[HarvestsFor]->' + g.name}]->(g)
+return g, h, r ;
+
+match (g:Grower), (h:Harvester)
+where g.id = 9 and h.id = 9
+create (h)-[r:HarvestsFor {year: 2022, name: h.name + '-[HarvestsFor]->' + g.name}]->(g)
+return g, h, r ;
+match (g:Grower), (h:Harvester)
+where g.id = 9 and h.id = 6
+create (h)-[r:HarvestsFor {year: 2022, name: h.name + '-[HarvestsFor]->' + g.name}]->(g)
+return g, h, r ;
+match (g:Grower), (h:Harvester)
+where g.id = 9 and h.id = 9
+create (g)-[r:Owns {name: g.name + '-[Owns]->' + h.name}]->(h)
+return g, h, r;
+
+match (g:Grower), (h:Harvester)
+where g.id = 10 and h.id = 10
+create (h)-[r:HarvestsFor {year: 2022, name: h.name + '-[HarvestsFor]->' + g.name}]->(g)
+return g, h, r ;
+match (g:Grower), (h:Harvester)
+where g.id = 10 and h.id = 4
+create (h)-[r:HarvestsFor {year: 2022, name: h.name + '-[HarvestsFor]->' + g.name}]->(g)
+return g, h, r ;
+match (g:Grower), (h:Harvester)
+where g.id = 10 and h.id = 10
+create (g)-[r:Owns {name: g.name + '-[Owns]->' + h.name}]->(h)
+return g, h, r;
+
+
+match (f:Field), (h:Harvester)
+where f.id in [1, 2, 3, 4, 5, 6] and h.id = 1
+create (f)-[r:HasHarvester {year: 2022, name: f.name + '-[HasHarvester]->' + h.name}]->(h);
+match (f:Field), (h:Harvester)
+where f.id in [1, 2, 3, 4, 5, 6] and h.id = 1
+create (h)-[r:HarvesterOf {year: 2022, name: h.name + '-[HarvesterOf]->' + f.name}]->(f);
+
+match (f:Field), (h:Harvester)
+where f.id in [7, 9, 11, 12] and h.id = 2
+create (f)-[r:HasHarvester {year: 2022, name: f.name + '-[HasHarvester]->' + h.name}]->(h);
+match (f:Field), (h:Harvester)
+where f.id in [7, 9, 11, 12] and h.id = 2
+create (h)-[r:HarvesterOf {year: 2022, name: h.name + '-[HarvesterOf]->' + f.name}]->(f);
+match (f:Field), (h:Harvester)
+where f.id in [8, 10] and h.id = 5
+create (f)-[r:HasHarvester {year: 2022, name: f.name + '-[HasHarvester]->' + h.name}]->(h);
+match (f:Field), (h:Harvester)
+where f.id in [8, 10] and h.id = 5
+create (h)-[r:HarvesterOf {year: 2022, name: h.name + '-[HarvesterOf]->' + f.name}]->(f);
+
+match (f:Field), (h:Harvester)
+where f.id in [13, 14, 15, 16, 17, 18] and h.id = 3
+create (f)-[r:HasHarvester {year: 2022, name: f.name + '-[HasHarvester]->' + h.name}]->(h);
+match (f:Field), (h:Harvester)
+where f.id in [13, 14, 15, 16, 17, 18] and h.id = 3
+create (h)-[r:HarvesterOf {year: 2022, name: h.name + '-[HarvesterOf]->' + f.name}]->(f);
+
+match (f:Field), (h:Harvester)
+where f.id in [19, 21, 23, 24] and h.id = 4
+create (f)-[r:HasHarvester {year: 2022, name: f.name + '-[HasHarvester]->' + h.name}]->(h);
+match (f:Field), (h:Harvester)
+where f.id in [19, 21, 23, 24] and h.id = 4
+create (h)-[r:HarvesterOf {year: 2022, name: h.name + '-[HarvesterOf]->' + f.name}]->(f);
+match (f:Field), (h:Harvester)
+where f.id in [20, 22] and h.id = 8
+create (f)-[r:HasHarvester {year: 2022, name: f.name + '-[HasHarvester]->' + h.name}]->(h);
+match (f:Field), (h:Harvester)
+where f.id in [20, 22] and h.id = 8
+create (h)-[r:HarvesterOf {year: 2022, name: h.name + '-[HarvesterOf]->' + f.name}]->(f);
+
+match (f:Field), (h:Harvester)
+where f.id in [43, 44, 45, 46, 47, 48] and h.id = 5
+create (f)-[r:HasHarvester {year: 2022, name: f.name + '-[HasHarvester]->' + h.name}]->(h);
+match (f:Field), (h:Harvester)
+where f.id in [43, 44, 45, 46, 47, 48] and h.id = 5
+create (h)-[r:HarvesterOf {year: 2022, name: h.name + '-[HarvesterOf]->' + f.name}]->(f);
+
+match (f:Field), (h:Harvester)
+where f.id in [25, 26, 27, 28, 29, 30] and h.id = 1
+create (f)-[r:HasHarvester {year: 2022, name: f.name + '-[HasHarvester]->' + h.name}]->(h);
+match (f:Field), (h:Harvester)
+where f.id in [25, 26, 27, 28, 29, 30] and h.id = 1
+create (h)-[r:HarvesterOf {year: 2022, name: h.name + '-[HarvesterOf]->' + f.name}]->(f);
+
+match (f:Field), (h:Harvester)
+where f.id in [31, 32, 33, 34, 35, 36] and h.id = 7
+create (f)-[r:HasHarvester {year: 2022, name: f.name + '-[HasHarvester]->' + h.name}]->(h);
+match (f:Field), (h:Harvester)
+where f.id in [31, 32, 33, 34, 35, 36] and h.id = 7
+create (h)-[r:HarvesterOf {year: 2022, name: h.name + '-[HarvesterOf]->' + f.name}]->(f);
+
+match (f:Field), (h:Harvester)
+where f.id in [37, 38, 39, 40, 41, 42] and h.id = 8
+create (f)-[r:HasHarvester {year: 2022, name: f.name + '-[HasHarvester]->' + h.name}]->(h);
+match (f:Field), (h:Harvester)
+where f.id in [37, 38, 39, 40, 41, 42] and h.id = 8
+create (h)-[r:HarvesterOf {year: 2022, name: h.name + '-[HarvesterOf]->' + f.name}]->(f);
+
+match (f:Field), (h:Harvester)
+where f.id in [55,56, 57, 58] and h.id = 9
+create (f)-[r:HasHarvester {year: 2022, name: f.name + '-[HasHarvester]->' + h.name}]->(h);
+match (f:Field), (h:Harvester)
+where f.id in [55,56, 57, 58] and h.id = 9
+create (h)-[r:HarvesterOf {year: 2022, name: h.name + '-[HarvesterOf]->' + f.name}]->(f);
+match (f:Field), (h:Harvester)
+where f.id in [59, 60] and h.id = 6
+create (f)-[r:HasHarvester {year: 2022, name: f.name + '-[HasHarvester]->' + h.name}]->(h);
+match (f:Field), (h:Harvester)
+where f.id in [59, 60] and h.id = 6
+create (h)-[r:HarvesterOf {year: 2022, name: h.name + '-[HarvesterOf]->' + f.name}]->(f);
+
+match (f:Field), (h:Harvester)
+where f.id in [49, 50, 51, 52] and h.id = 10
+create (f)-[r:HasHarvester {year: 2022, name: f.name + '-[HasHarvester]->' + h.name}]->(h);
+match (f:Field), (h:Harvester)
+where f.id in [49, 50, 51, 52] and h.id = 10
+create (h)-[r:HarvesterOf {year: 2022, name: h.name + '-[HarvesterOf]->' + f.name}]->(f);
+match (f:Field), (h:Harvester)
+where f.id in [53, 54] and h.id = 4
+create (f)-[r:HasHarvester {year: 2022, name: f.name + '-[HasHarvester]->' + h.name}]->(h);
+match (f:Field), (h:Harvester)
+where f.id in [53, 54] and h.id = 4
+create (h)-[r:HarvesterOf {year: 2022, name: h.name + '-[HarvesterOf]->' + f.name}]->(f);
+
+create (:People {id: 11, name: 'Ed Jones', fname: 'Ed', lname: 'Jones'});
+create (:People {id: 12, name: 'Rick Smith', fname: 'Rick', lname: 'Smith'});
+create (:People {id: 13, name: 'Jeff Jackson', fname: 'Jeff', lname: 'Jackson'});
+create (:People {id: 14, name: 'Mike Larson', fname: 'Mike', lname: 'Larson'});
+create (:People {id: 15, name: 'Sarah Mitchell', fname: 'Sarah', lname: 'Mitchell'});
+create (:People {id: 16, name: 'Chuck Edwards', fname: 'Chuck', lname: 'Edwards'});
+create (:People {id: 17, name: 'Jim Johnson', fname: 'Jim', lname: 'Johnson'});
+create (:People {id: 18, name: 'Tom Randall', fname: 'Tom', lname: 'Randall'});
+create (:People {id: 19, name: 'Cindy Maxus', fname: 'Cindy', lname: 'Maxus'});
+create (:People {id: 20, name: 'Raul Charles', fname: 'Raul', lname: 'Charles'});
+create (:People {id: 21, name: 'Al Jones', fname: 'Al', lname: 'Jones'});
+create (:People {id: 22, name: 'Ron Smith', fname: 'Ron', lname: 'Smith'});
+create (:People {id: 23, name: 'James Jackson', fname: 'James', lname: 'Jackson'});
+create (:People {id: 24, name: 'Mandy Larson', fname: 'Mandy', lname: 'Larson'});
+create (:People {id: 25, name: 'Seth Mitchell', fname: 'Seth', lname: 'Mitchell'});
+create (:People {id: 26, name: 'Cole Edwards', fname: 'Cole', lname: 'Edwards'});
+create (:People {id: 27, name: 'John Johnson', fname: 'John', lname: 'Johnson'});
+create (:People {id: 28, name: 'Tim Randall', fname: 'Tim', lname: 'Randall'});
+create (:People {id: 29, name: 'Kurt Maxus', fname: 'Kurt', lname: 'Maxus'});
+create (:People {id: 30, name: 'Rob Charles', fname: 'Rob', lname: 'Charles'});
+create (:People {id: 31, name: 'Sandy Jones', fname: 'Sandy', lname: 'Jones'});
+create (:People {id: 32, name: 'Renaldo Smith', fname: 'Renaldo', lname: 'Smith'});
+create (:People {id: 33, name: 'Pete Jackson', fname: 'Pete', lname: 'Jackson'});
+create (:People {id: 34, name: 'Matt Larson', fname: 'Matt', lname: 'Larson'});
+create (:People {id: 35, name: 'Sonja Mitchell', fname: 'Sonja', lname: 'Mitchell'});
+create (:People {id: 36, name: 'Cameron Edwards', fname: 'Cameron', lname: 'Edwards'});
+create (:People {id: 37, name: 'Valkerie Johnson', fname: 'Valkerie', lname: 'Johnson'});
+create (:People {id: 38, name: 'Toto Randall', fname: 'Toto', lname: 'Randall'});
+create (:People {id: 39, name: 'Nero Maxus', fname: 'Nero', lname: 'Maxus'});
+create (:People {id: 40, name: 'Cora Charles', fname: 'Cora', lname: 'Charles'});
+create (:People {id: 41, name: 'Ethan Jones', fname: 'Ethan', lname: 'Jones'});
+create (:People {id: 42, name: 'Kent Smith', fname: 'Kent', lname: 'Smith'});
+create (:People {id: 43, name: 'Terry Jackson', fname: 'Terry', lname: 'Jackson'});
+create (:People {id: 44, name: 'Larry Larson', fname: 'Larry', lname: 'Larson'});
+create (:People {id: 45, name: 'Samuel Mitchell', fname: 'Samuel', lname: 'Mitchell'});
+create (:People {id: 46, name: 'Charlie Edwards', fname: 'Charlie', lname: 'Edwards'});
+create (:People {id: 47, name: 'Jimmy Johnson', fname: 'Jimmy', lname: 'Johnson'});
+create (:People {id: 48, name: 'Tommy Randall', fname: 'Tommy', lname: 'Randall'});
+create (:People {id: 49, name: 'Cinthia Maxus', fname: 'Cinthia', lname: 'Maxus'});
+create (:People {id: 50, name: 'Kristi Charles', fname: 'Kristi', lname: 'Charles'});
+create (:People {id: 51, name: 'Zander Jones', fname: 'Zander', lname: 'Jones'});
+create (:People {id: 52, name: 'Isaac Smith', fname: 'Isaac', lname: 'Smith'});
+create (:People {id: 53, name: 'Rene Jackson', fname: 'Rene', lname: 'Jackson'});
+create (:People {id: 54, name: 'Maxwell Larson', fname: 'Maxwell', lname: 'Larson'});
+create (:People {id: 55, name: 'Lindsay Mitchell', fname: 'Lindsay', lname: 'Mitchell'});
+create (:People {id: 56, name: 'Ian Edwards', fname: 'Ian', lname: 'Edwards'});
+create (:People {id: 57, name: 'Ford Johnson', fname: 'Ford', lname: 'Johnson'});
+create (:People {id: 58, name: 'Lee Randall', fname: 'Lee', lname: 'Randall'});
+create (:People {id: 59, name: 'Woody Maxus', fname: 'Woody', lname: 'Maxus'});
+create (:People {id: 60, name: 'Lewis Charles', fname: 'Lewis', lname: 'Charles'});
+create (:People {id: 61, name: 'Evan Jones', fname: 'Evan', lname: 'Jones'});
+create (:People {id: 62, name: 'Angel Smith', fname: 'Angel', lname: 'Smith'});
+create (:People {id: 63, name: 'Jack Jackson', fname: 'Jack', lname: 'Jackson'});
+create (:People {id: 64, name: 'Lonny Larson', fname: 'Lonny', lname: 'Larson'});
+create (:People {id: 65, name: 'Mara Mitchell', fname: 'Mara', lname: 'Mitchell'});
+create (:People {id: 66, name: 'Maximus Edwards', fname: 'Maximus', lname: 'Edwards'});
+create (:People {id: 67, name: 'Jojo Johnson', fname: 'Jojo', lname: 'Johnson'});
+create (:People {id: 68, name: 'Robert Randall', fname: 'Robert', lname: 'Randall'});
+create (:People {id: 69, name: 'Jenna Maxus', fname: 'Jenna', lname: 'Maxus'});
+create (:People {id: 70, name: 'Wendel Charles', fname: 'Wendel', lname: 'Charles'});
+create (:People {id: 71, name: 'Brent Jones', fname: 'Brent', lname: 'Jones'});
+create (:People {id: 72, name: 'Dave Smith', fname: 'Dave', lname: 'Smith'});
+create (:People {id: 73, name: 'Brandon Jackson', fname: 'Brandon', lname: 'Jackson'});
+create (:People {id: 74, name: 'Marshall Larson', fname: 'Marshall', lname: 'Larson'});
+create (:People {id: 75, name: 'Sammy Mitchell', fname: 'Sammy', lname: 'Mitchell'});
+create (:People {id: 76, name: 'Harry Edwards', fname: 'Harry', lname: 'Edwards'});
+create (:People {id: 77, name: 'Harris Johnson', fname: 'Harris', lname: 'Johnson'});
+create (:People {id: 78, name: 'Russel Randall', fname: 'Russel', lname: 'Randall'});
+create (:People {id: 79, name: 'Bubba Maxus', fname: 'Bubba', lname: 'Maxus'});
+create (:People {id: 80, name: 'Hans Charles', fname: 'Hans', lname: 'Charles'});
+create (:People {id: 81, name: 'Luke Jones', fname: 'Luke', lname: 'Jones'});
+create (:People {id: 82, name: 'Lucy Smith', fname: 'Lucy', lname: 'Smith'});
+create (:People {id: 83, name: 'Kirk Jackson', fname: 'Kirk', lname: 'Jackson'});
+create (:People {id: 84, name: 'Kraig Larson', fname: 'Kraig', lname: 'Larson'});
+create (:People {id: 85, name: 'Roger Mitchell', fname: 'Roger', lname: 'Mitchell'});
+create (:People {id: 86, name: 'Jess Edwards', fname: 'Jess', lname: 'Edwards'});
+create (:People {id: 87, name: 'Drew Johnson', fname: 'Drew', lname: 'Johnson'});
+create (:People {id: 88, name: 'Troy Randall', fname: 'Troy', lname: 'Randall'});
+create (:People {id: 89, name: 'Michael Maxus', fname: 'Michael', lname: 'Maxus'});
+create (:People {id: 90, name: 'Daniel Charles', fname: 'Daniel', lname: 'Charles'});
+create (:People {id: 91, name: 'Jake Jones', fname: 'Jake', lname: 'Jones'});
+create (:People {id: 92, name: 'Keith Smith', fname: 'Keith', lname: 'Smith'});
+create (:People {id: 93, name: 'Ben Jackson', fname: 'Ben', lname: 'Jackson'});
+create (:People {id: 94, name: 'Chris Larson', fname: 'Chris', lname: 'Larson'});
+create (:People {id: 95, name: 'Chad Mitchell', fname: 'Chad', lname: 'Mitchell'});
+create (:People {id: 96, name: 'Kolton Edwards', fname: 'Kolton', lname: 'Edwards'});
+create (:People {id: 97, name: 'Korrin Johnson', fname: 'Korrin', lname: 'Johnson'});
+create (:People {id: 98, name: 'Doug Randall', fname: 'Doug', lname: 'Randall'});
+create (:People {id: 99, name: 'Ken Maxus', fname: 'Ken', lname: 'Maxus'});
+create (:People {id: 100, name: 'Carla Charles', fname: 'Carla', lname: 'Charles'});
+create (:People {id: 101, name: 'Paul Jones', fname: 'Paul', lname: 'Jones'});
+create (:People {id: 102, name: 'Patrick Smith', fname: 'Patrick', lname: 'Smith'});
+create (:People {id: 103, name: 'Ricardo Jackson', fname: 'Ricardo', lname: 'Jackson'});
+create (:People {id: 104, name: 'Zack Larson', fname: 'Zack', lname: 'Larson'});
+create (:People {id: 105, name: 'Perry Mitchell', fname: 'Perry', lname: 'Mitchell'});
+create (:People {id: 106, name: 'Turk Edwards', fname: 'Turk', lname: 'Edwards'});
+create (:People {id: 107, name: 'Dan Johnson', fname: 'Dan', lname: 'Johnson'});
+create (:People {id: 108, name: 'Mandy Randall', fname: 'Mandy', lname: 'Randall'});
+create (:People {id: 109, name: 'Burt Maxus', fname: 'Burt', lname: 'Maxus'});
+create (:People {id: 110, name: 'Andy Charles', fname: 'Andy', lname: 'Charles'});
+create (:People {id: 111, name: 'Dorian Jones', fname: 'Dorian', lname: 'Jones'});
+create (:People {id: 112, name: 'Tasha Smith', fname: 'Tasha', lname: 'Smith'});
+create (:People {id: 113, name: 'Dana Jackson', fname: 'Dana', lname: 'Jackson'});
+create (:People {id: 114, name: 'David Larson', fname: 'David', lname: 'Larson'});
+create (:People {id: 115, name: 'Jeffery Mitchell', fname: 'Jeffery', lname: 'Mitchell'});
+create (:People {id: 116, name: 'Charles Edwards', fname: 'Charles', lname: 'Edwards'});
+create (:People {id: 117, name: 'Tyler Johnson', fname: 'Tyler', lname: 'Johnson'});
+create (:People {id: 118, name: 'Alan Randall', fname: 'Alan', lname: 'Randall'});
+create (:People {id: 119, name: 'Nora Maxus', fname: 'Nora', lname: 'Maxus'});
+create (:People {id: 120, name: 'Steve Charles', fname: 'Steve', lname: 'Charles'});
+create (:People {id: 121, name: 'Jacob Jones', fname: 'Jacob', lname: 'Jones'});
+create (:People {id: 122, name: 'Brian Smith', fname: 'Brian', lname: 'Smith'});
+create (:People {id: 123, name: 'Harley Jackson', fname: 'Harley', lname: 'Jackson'});
+create (:People {id: 124, name: 'Frank Larson', fname: 'Frank', lname: 'Larson'});
+create (:People {id: 125, name: 'Angel Mitchell', fname: 'Angel', lname: 'Mitchell'});
+create (:People {id: 126, name: 'Josh Edwards', fname: 'Josh', lname: 'Edwards'});
+create (:People {id: 127, name: 'Rocky Johnson', fname: 'Rocky', lname: 'Johnson'});
+create (:People {id: 128, name: 'Bryce Randall', fname: 'Bryce', lname: 'Randall'});
+create (:People {id: 129, name: 'Donna Maxus', fname: 'Donna', lname: 'Maxus'});
+create (:People {id: 130, name: 'Kyle Charles', fname: 'Kyle', lname: 'Charles'});
+create (:People {id: 131, name: 'Joe Jones', fname: 'Joe', lname: 'Jones'});
+create (:People {id: 132, name: 'Luke Smith', fname: 'Luke', lname: 'Smith'});
+create (:People {id: 133, name: 'Alex Jackson', fname: 'Alex', lname: 'Jackson'});
+create (:People {id: 134, name: 'Juan Larson', fname: 'Juan', lname: 'Larson'});
+create (:People {id: 135, name: 'Solara Mitchell', fname: 'Solara', lname: 'Mitchell'});
+create (:People {id: 136, name: 'Kevin Edwards', fname: 'Kevin', lname: 'Edwards'});
+create (:People {id: 137, name: 'Ivar Johnson', fname: 'Ivar', lname: 'Johnson'});
+create (:People {id: 138, name: 'Sheila Randall', fname: 'Sheila', lname: 'Randall'});
+create (:People {id: 139, name: 'Tony Maxus', fname: 'Tony', lname: 'Maxus'});
+create (:People {id: 140, name: 'Darius Charles', fname: 'Darius', lname: 'Charles'});
+create (:People {id: 141, name: 'Ellen Jones', fname: 'Ellen', lname: 'Jones'});
+create (:People {id: 142, name: 'Franklin Smith', fname: 'Franklin', lname: 'Smith'});
+create (:People {id: 143, name: 'Richard Jackson', fname: 'Richard', lname: 'Jackson'});
+create (:People {id: 144, name: 'Barry Larson', fname: 'Barry', lname: 'Larson'});
+create (:People {id: 145, name: 'Jordan Mitchell', fname: 'Jordan', lname: 'Mitchell'});
+create (:People {id: 146, name: 'Rachel Edwards', fname: 'Rachel', lname: 'Edwards'});
+create (:People {id: 147, name: 'Bonnie Johnson', fname: 'Bonnie', lname: 'Johnson'});
+create (:People {id: 148, name: 'Ginger Randall', fname: 'Ginger', lname: 'Randall'});
+create (:People {id: 149, name: 'Don Maxus', fname: 'Don', lname: 'Maxus'});
+create (:People {id: 150, name: 'Vince Charles', fname: 'Vince', lname: 'Charles'});
+
+create (s:Shipper {name:'MShipper', id: 1}) return s;
+create (s:Shipper {name:'AShipper', id: 2}) return s;
+create (s:Shipper {name:'BShipper', id: 3}) return s;
+create (s:Shipper {name:'TShipper', id: 4}) return s;
+create (s:Shipper {name:'CShipper', id: 5}) return s;
+create (s:Shipper {name:'BShipper', id: 6}) return s;
+create (s:Shipper {name:'QShipper', id: 7}) return s;
+create (s:Shipper {name:'RShipper', id: 8}) return s;
+create (s:Shipper {name:'ZShipper', id: 9}) return s;
+create (s:Shipper {name:'VShipper', id: 10}) return s;
+
+match (s:Shipper), (p:People)
+where s.id = 1 and p.id = 11
+create (s)-[r:Contact {year: 2022, type: 'Primary', name: s.name + '-[Contact]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where s.id = 2 and p.id = 12
+create (s)-[r:Contact {year: 2022, type: 'Primary', name: s.name + '-[Contact]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where s.id = 3 and p.id = 13
+create (s)-[r:Contact {year: 2022, type: 'Primary', name: s.name + '-[Contact]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where s.id = 4 and p.id = 14
+create (s)-[r:Contact {year: 2022, type: 'Primary', name: s.name + '-[Contact]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where s.id = 5 and p.id = 15
+create (s)-[r:Contact {year: 2022, type: 'Primary', name: s.name + '-[Contact]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where s.id = 6 and p.id = 16
+create (s)-[r:Contact {year: 2022, type: 'Primary', name: s.name + '-[Contact]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where s.id = 7 and p.id = 17
+create (s)-[r:Contact {year: 2022, type: 'Primary', name: s.name + '-[Contact]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where s.id = 8 and p.id = 18
+create (s)-[r:Contact {year: 2022, type: 'Primary', name: s.name + '-[Contact]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where s.id = 9 and p.id = 19
+create (s)-[r:Contact {year: 2022, type: 'Primary', name: s.name + '-[Contact]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where s.id = 10 and p.id = 20
+create (s)-[r:Contact {year: 2022, type: 'Primary', name: s.name + '-[Contact]->' + p.name}]->(p);
+
+match (s:Shipper), (p:People)
+where p.id in [21, 22, 23, 24, 25, 26, 27, 28, 29, 30] and s.id = 1
+create (p)-[r:WorksFor {year: 2022, name: p.name + '-[WorksFor]->' + s.name}]->(s);
+match (s:Shipper), (p:People)
+where p.id in [21, 22, 23, 24, 25, 26, 27, 28, 29, 30] and s.id = 1
+create (s)-[r:Employs {year: 2022, name: s.name + '-[Employs]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [21, 22, 23, 24, 25, 26, 27, 28, 29, 30] and s.id = 1
+create (s)-[r:Driver {year: 2022, name: s.name + '-[Driver]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [21, 22, 23, 24, 25, 26, 27, 28, 29, 30] and s.id = 1
+create (p)-[r:DrivesFor {year: 2022, name: p.name + '-[DrivesFor]->' + s.name}]->(s);
+
+match (s:Shipper), (p:People)
+where p.id in [31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 42, 43, 44, 45] and s.id = 2
+create (p)-[r:WorksFor {year: 2022, name: p.name + '-[WorksFor]->' + s.name}]->(s);
+match (s:Shipper), (p:People)
+where p.id in [31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 42, 43, 44, 45] and s.id = 2
+create (s)-[r:Employs {year: 2022, name: s.name + '-[Employs]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 42, 43, 44, 45] and s.id = 2
+create (s)-[r:Driver {year: 2022, name: s.name + '-[Driver]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 42, 43, 44, 45] and s.id = 2
+create (p)-[r:DrivesFor {year: 2022, name: p.name + '-[DrivesFor]->' + s.name}]->(s);
+
+match (s:Shipper), (p:People)
+where p.id in [46, 47, 48, 49, 50, 52, 53, 54, 55, 56, 57, 58, 59, 60] and s.id = 3
+create (p)-[r:WorksFor {year: 2022, name: p.name + '-[WorksFor]->' + s.name}]->(s);
+match (s:Shipper), (p:People)
+where p.id in [46, 47, 48, 49, 50, 52, 53, 54, 55, 56, 57, 58, 59, 60] and s.id = 3
+create (s)-[r:Employs {year: 2022, name: s.name + '-[Employs]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [46, 47, 48, 49, 50, 52, 53, 54, 55, 56, 57, 58, 59, 60] and s.id = 3
+create (s)-[r:Driver {year: 2022, name: s.name + '-[Driver]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [46, 47, 48, 49, 50, 52, 53, 54, 55, 56, 57, 58, 59, 60] and s.id = 3
+create (p)-[r:DrivesFor {year: 2022, name: p.name + '-[DrivesFor]->' + s.name}]->(s);
+
+match (s:Shipper), (p:People)
+where p.id in [61, 62, 63, 64, 65, 66, 67, 68, 69, 70] and s.id = 4
+create (p)-[r:WorksFor {year: 2022, name: p.name + '-[WorksFor]->' + s.name}]->(s);
+match (s:Shipper), (p:People)
+where p.id in [61, 62, 63, 64, 65, 66, 67, 68, 69, 70] and s.id = 4
+create (s)-[r:Employs {year: 2022, name: s.name + '-[Employs]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [61, 62, 63, 64, 65, 66, 67, 68, 69, 70] and s.id = 4
+create (s)-[r:Driver {year: 2022, name: s.name + '-[Driver]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [61, 62, 63, 64, 65, 66, 67, 68, 69, 70] and s.id = 4
+create (p)-[r:DrivesFor {year: 2022, name: p.name + '-[DrivesFor]->' + s.name}]->(s);
+
+match (s:Shipper), (p:People)
+where p.id in [71, 72, 73, 74, 75, 76] and s.id = 5
+create (p)-[r:WorksFor {year: 2022, name: p.name + '-[WorksFor]->' + s.name}]->(s);
+match (s:Shipper), (p:People)
+where p.id in [71, 72, 73, 74, 75, 76] and s.id = 5
+create (s)-[r:Employs {year: 2022, name: s.name + '-[Employs]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [71, 72, 73, 74, 75, 76] and s.id = 5
+create (s)-[r:Driver {year: 2022, name: s.name + '-[Driver]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [71, 72, 73, 74, 75, 76] and s.id = 5
+create (p)-[r:DrivesFor {year: 2022, name: p.name + '-[DrivesFor]->' + s.name}]->(s);
+
+match (s:Shipper), (p:People)
+where p.id in [77, 78, 79, 80] and s.id = 6
+create (p)-[r:WorksFor {year: 2022, name: p.name + '-[WorksFor]->' + s.name}]->(s);
+match (s:Shipper), (p:People)
+where p.id in [77, 78, 79, 80] and s.id = 6
+create (s)-[r:Employs {year: 2022, name: s.name + '-[Employs]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [77, 78, 79, 80] and s.id = 6
+create (s)-[r:Driver {year: 2022, name: s.name + '-[Driver]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [77, 78, 79, 80] and s.id = 6
+create (p)-[r:DrivesFor {year: 2022, name: p.name + '-[DrivesFor]->' + s.name}]->(s);
+
+match (s:Shipper), (p:People)
+where p.id in [81, 82, 83, 84, 85] and s.id = 7
+create (p)-[r:WorksFor {year: 2022, name: p.name + '-[WorksFor]->' + s.name}]->(s);
+match (s:Shipper), (p:People)
+where p.id in [81, 82, 83, 84, 85] and s.id = 7
+create (s)-[r:Employs {year: 2022, name: s.name + '-[Employs]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [81, 82, 83, 84, 85] and s.id = 7
+create (s)-[r:Driver {year: 2022, name: s.name + '-[Driver]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [81, 82, 83, 84, 85] and s.id = 7
+create (p)-[r:DrivesFor {year: 2022, name: p.name + '-[DrivesFor]->' + s.name}]->(s);
+
+match (s:Shipper), (p:People)
+where p.id in [86, 87, 88, 89, 90] and s.id = 8
+create (p)-[r:WorksFor {year: 2022, name: p.name + '-[WorksFor]->' + s.name}]->(s);
+match (s:Shipper), (p:People)
+where p.id in [86, 87, 88, 89, 90] and s.id = 8
+create (s)-[r:Employs {year: 2022, name: s.name + '-[Employs]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [86, 87, 88, 89, 90] and s.id = 8
+create (s)-[r:Driver {year: 2022, name: s.name + '-[Driver]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [86, 87, 88, 89, 90] and s.id = 8
+create (p)-[r:DrivesFor {year: 2022, name: p.name + '-[DrivesFor]->' + s.name}]->(s);
+
+match (s:Shipper), (p:People)
+where p.id in [91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102] and s.id = 9
+create (p)-[r:WorksFor {year: 2022, name: p.name + '-[WorksFor]->' + s.name}]->(s);
+match (s:Shipper), (p:People)
+where p.id in [91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102] and s.id = 9
+create (s)-[r:Employs {year: 2022, name: s.name + '-[Employs]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102] and s.id = 9
+create (s)-[r:Driver {year: 2022, name: s.name + '-[Driver]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102] and s.id = 9
+create (p)-[r:DrivesFor {year: 2022, name: p.name + '-[DrivesFor]->' + s.name}]->(s);
+
+match (s:Shipper), (p:People)
+where p.id in [103, 104, 105, 106, 107, 108, 109, 110] and s.id = 10
+create (p)-[r:WorksFor {year: 2022, name: p.name + '-[WorksFor]->' + s.name}]->(s);
+match (s:Shipper), (p:People)
+where p.id in [103, 104, 105, 106, 107, 108, 109, 110] and s.id = 10
+create (s)-[r:Employs {year: 2022, name: s.name + '-[Employs]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [103, 104, 105, 106, 107, 108, 109, 110] and s.id = 10
+create (s)-[r:Driver {year: 2022, name: s.name + '-[Driver]->' + p.name}]->(p);
+match (s:Shipper), (p:People)
+where p.id in [103, 104, 105, 106, 107, 108, 109, 110] and s.id = 10
+create (p)-[r:DrivesFor {year: 2022, name: p.name + '-[DrivesFor]->' + s.name}]->(s);
+
+
+create (t:Truck {id: 1, name: 'T1', type: 'tractor', gvwr: 105000, make: 'Kenworth', year: 2005, model:'KW1', license: 'TL1'});
+create (t:Truck {id: 2, name: 'T2', type: 'dump', gvwr: 85000, make: 'Peterbilt', year: 2006, model:'P1', license: 'TL2'});
+create (t:Truck {id: 3, name: 'T3', type: 'tractor', gvwr: 105000, make: 'Kenworth', year: 2007, model:'KW1', license: 'TL3'});
+create (t:Truck {id: 4, name: 'T4', type: 'dump', gvwr: 95000, make: 'Mack', year: 2004, model:'M1', license: 'TL4'});
+create (t:Truck {id: 5, name: 'T5', type: 'tractor', gvwr: 105000, make: 'International', year: 2003, model:'I1', license: 'TL5'});
+create (t:Truck {id: 6, name: 'T6', type: 'tractor', gvwr: 101000, make: 'Freightliner', year: 2009, model:'F1', license: 'TL6'});
+create (t:Truck {id: 7, name: 'T7', type: 'tractor', gvwr: 103000, make: 'Peterbilt', year: 2011, model:'P2', license: 'TL7'});
+create (t:Truck {id: 8, name: 'T8', type: 'tractor', gvwr: 100000, make: 'Kenworth', year: 2015, model:'KW1', license: 'TL8'});
+create (t:Truck {id: 9, name: 'T9', type: 'tractor', gvwr: 102000, make: 'Peterbilt', year: 2012, model:'P2', license: 'TL9'});
+create (t:Truck {id: 10, name: 'T10', type: 'tractor', gvwr: 106000, make: 'Kenworth', year: 2016, model:'KW1', license: 'TL10'});
+match (t:Truck), (s:Shipper)
+where t.id in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] and s.id = 1
+create (s)-[r:Operates {name: s.name + '-[Operates]->' + t.name, year: 2022}]->(t);
+
+create (t:Truck {id: 11, name: 'T11', type: 'tractor', gvwr: 105000, make: 'Kenworth', year: 2005, model:'KW1', license: 'T11'});
+create (t:Truck {id: 12, name: 'T12', type: 'dump', gvwr: 85000, make: 'Peterbilt', year: 2006, model:'KW1', license: 'TL12'});
+create (t:Truck {id: 13, name: 'T13', type: 'tractor', gvwr: 105000, make: 'Kenworth', year: 2007, model:'KW1', license: 'TL13'});
+create (t:Truck {id: 14, name: 'T14', type: 'dump', gvwr: 95000, make: 'Mack', year: 2004, model:'KW1', license: 'TL14'});
+create (t:Truck {id: 15, name: 'T15', type: 'tractor', gvwr: 105000, make: 'International', year: 2003, model:'KW1', license: 'TL15'});
+create (t:Truck {id: 16, name: 'T16', type: 'tractor', gvwr: 101000, make: 'Freightliner', year: 2009, model:'KW1', license: 'TL16'});
+create (t:Truck {id: 17, name: 'T17', type: 'tractor', gvwr: 103000, make: 'Peterbilt', year: 2011, model:'KW1', license: 'TL17'});
+create (t:Truck {id: 18, name: 'T18', type: 'tractor', gvwr: 100000, make: 'Kenworth', year: 2015, model:'KW1', license: 'TL18'});
+create (t:Truck {id: 19, name: 'T19', type: 'tractor', gvwr: 102000, make: 'Peterbilt', year: 2012, model:'KW1', license: 'TL19'});
+create (t:Truck {id: 20, name: 'T20', type: 'tractor', gvwr: 106000, make: 'Kenworth', year: 2016, model:'KW1', license: 'TL20'});
+create (t:Truck {id: 21, name: 'T21', type: 'tractor', gvwr: 101000, make: 'Freightliner', year: 2009, model:'KW1', license: 'TL21'});
+create (t:Truck {id: 22, name: 'T22', type: 'tractor', gvwr: 103000, make: 'Peterbilt', year: 2011, model:'KW1', license: 'TL22'});
+create (t:Truck {id: 23, name: 'T23', type: 'tractor', gvwr: 100000, make: 'Kenworth', year: 2015, model:'KW1', license: 'TL23'});
+create (t:Truck {id: 24, name: 'T24', type: 'tractor', gvwr: 102000, make: 'Peterbilt', year: 2012, model:'KW1', license: 'TL24'});
+create (t:Truck {id: 25, name: 'T25', type: 'tractor', gvwr: 106000, make: 'Kenworth', year: 2016, model:'KW1', license: 'TL25'});
+match (t:Truck), (s:Shipper)
+where t.id in [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25] and s.id = 2
+create (s)-[r:Operates {name: s.name + '-[Operates]->' + t.name, year: 2022}]->(t);
+
+create (t:Truck {id: 26, name: 'T26', type: 'tractor', gvwr: 105000, make: 'Kenworth', year: 2005, model:'KW1', license: 'TL26'});
+create (t:Truck {id: 27, name: 'T27', type: 'dump', gvwr: 85000, make: 'Peterbilt', year: 2006, model:'KW1', license: 'TL27'});
+create (t:Truck {id: 28, name: 'T28', type: 'tractor', gvwr: 105000, make: 'Kenworth', year: 2007, model:'KW1', license: 'TL28'});
+create (t:Truck {id: 29, name: 'T29', type: 'dump', gvwr: 95000, make: 'Mack', year: 2004, model:'KW1', license: 'TL29'});
+create (t:Truck {id: 30, name: 'T30', type: 'tractor', gvwr: 105000, make: 'International', year: 2003, model:'KW1', license: 'TL30'});
+create (t:Truck {id: 31, name: 'T31', type: 'tractor', gvwr: 101000, make: 'Freightliner', year: 2009, model:'KW1', license: 'TL31'});
+create (t:Truck {id: 32, name: 'T32', type: 'tractor', gvwr: 103000, make: 'Peterbilt', year: 2011, model:'KW1', license: 'TL32'});
+create (t:Truck {id: 33, name: 'T33', type: 'tractor', gvwr: 100000, make: 'Kenworth', year: 2015, model:'KW1', license: 'TL33'});
+create (t:Truck {id: 34, name: 'T34', type: 'tractor', gvwr: 102000, make: 'Peterbilt', year: 2012, model:'KW1', license: 'TL34'});
+create (t:Truck {id: 35, name: 'T35', type: 'tractor', gvwr: 106000, make: 'Kenworth', year: 2016, model:'KW1', license: 'TL35'});
+create (t:Truck {id: 36, name: 'T36', type: 'tractor', gvwr: 101000, make: 'Freightliner', year: 2009, model:'KW1', license: 'TL36'});
+create (t:Truck {id: 37, name: 'T37', type: 'tractor', gvwr: 103000, make: 'Peterbilt', year: 2011, model:'KW1', license: 'TL37'});
+create (t:Truck {id: 38, name: 'T38', type: 'tractor', gvwr: 100000, make: 'Kenworth', year: 2015, model:'KW1', license: 'TL88'});
+create (t:Truck {id: 39, name: 'T39', type: 'tractor', gvwr: 102000, make: 'Peterbilt', year: 2012, model:'KW1', license: 'TL39'});
+create (t:Truck {id: 40, name: 'T40', type: 'tractor', gvwr: 106000, make: 'Kenworth', year: 2016, model:'KW1', license: 'TL40'});
+match (t:Truck), (s:Shipper)
+where t.id in [26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40] and s.id = 3
+create (s)-[r:Operates {name: s.name + '-[Operates]->' + t.name, year: 2022}]->(t);
+
+create (t:Truck {id: 41, name: 'T41', type: 'tractor', gvwr: 105000, make: 'Kenworth', year: 2005, model:'KW1', license: 'TL41'});
+create (t:Truck {id: 42, name: 'T42', type: 'dump', gvwr: 85000, make: 'Peterbilt', year: 2006, model:'KW1', license: 'TL42'});
+create (t:Truck {id: 43, name: 'T43', type: 'tractor', gvwr: 105000, make: 'Kenworth', year: 2007, model:'KW1', license: 'TL43'});
+create (t:Truck {id: 44, name: 'T44', type: 'dump', gvwr: 95000, make: 'Mack', year: 2004, model:'KW1', license: 'TL44'});
+create (t:Truck {id: 45, name: 'T45', type: 'tractor', gvwr: 105000, make: 'International', year: 2003, model:'KW1', license: 'TL45'});
+create (t:Truck {id: 46, name: 'T46', type: 'tractor', gvwr: 101000, make: 'Freightliner', year: 2009, model:'KW1', license: 'TL46'});
+create (t:Truck {id: 47, name: 'T47', type: 'tractor', gvwr: 103000, make: 'Peterbilt', year: 2011, model:'KW1', license: 'TL47'});
+create (t:Truck {id: 48, name: 'T48', type: 'tractor', gvwr: 100000, make: 'Kenworth', year: 2015, model:'KW1', license: 'TL48'});
+create (t:Truck {id: 49, name: 'T49', type: 'tractor', gvwr: 102000, make: 'Peterbilt', year: 2012, model:'KW1', license: 'TL49'});
+create (t:Truck {id: 50, name: 'T50', type: 'tractor', gvwr: 106000, make: 'Kenworth', year: 2016, model:'KW1', license: 'TL50'});
+match (t:Truck), (s:Shipper)
+where t.id in [41, 42, 43, 44, 45, 46, 47, 48, 49, 50] and s.id = 4
+create (s)-[r:Operates {name: s.name + '-[Operates]->' + t.name, year: 2022}]->(t);
+
+create (t:Truck {id: 51, name: 'T51', type: 'tractor', gvwr: 105000, make: 'International', year: 2003, model:'KW1', license: 'TL51'});
+create (t:Truck {id: 52, name: 'T52', type: 'tractor', gvwr: 101000, make: 'Freightliner', year: 2009, model:'KW1', license: 'TL52'});
+create (t:Truck {id: 53, name: 'T53', type: 'tractor', gvwr: 103000, make: 'Peterbilt', year: 2011, model:'KW1', license: 'TL53'});
+create (t:Truck {id: 54, name: 'T54', type: 'tractor', gvwr: 100000, make: 'Kenworth', year: 2015, model:'KW1', license: 'TL54'});
+create (t:Truck {id: 55, name: 'T55', type: 'tractor', gvwr: 102000, make: 'Peterbilt', year: 2012, model:'KW1', license: 'TL55'});
+create (t:Truck {id: 56, name: 'T56', type: 'tractor', gvwr: 106000, make: 'Kenworth', year: 2016, model:'KW1', license: 'TL56'});
+match (t:Truck), (s:Shipper)
+where t.id in [51, 52, 53, 54, 55, 56] and s.id = 5
+create (s)-[r:Operates {name: s.name + '-[Operates]->' + t.name, year: 2022}]->(t);
+
+create (t:Truck {id: 57, name: 'T57', type: 'tractor', gvwr: 103000, make: 'Peterbilt', year: 2011, model:'KW1', license: 'TL57'});
+create (t:Truck {id: 58, name: 'T58', type: 'tractor', gvwr: 100000, make: 'Kenworth', year: 2015, model:'KW1', license: 'TL58'});
+create (t:Truck {id: 59, name: 'T59', type: 'tractor', gvwr: 102000, make: 'Peterbilt', year: 2012, model:'KW1', license: 'TL59'});
+create (t:Truck {id: 60, name: 'T60', type: 'tractor', gvwr: 106000, make: 'Kenworth', year: 2016, model:'KW1', license: 'TL60'});
+match (t:Truck), (s:Shipper)
+where t.id in [57, 58, 59, 60] and s.id = 6
+create (s)-[r:Operates {name: s.name + '-[Operates]->' + t.name, year: 2022}]->(t);
+
+create (t:Truck {id: 61, name: 'T61', type: 'tractor', gvwr: 103000, make: 'Peterbilt', year: 2011, model:'KW1', license: 'TL61'});
+create (t:Truck {id: 62, name: 'T62', type: 'tractor', gvwr: 100000, make: 'Kenworth', year: 2015, model:'KW1', license: 'TL62'});
+create (t:Truck {id: 63, name: 'T63', type: 'tractor', gvwr: 102000, make: 'Peterbilt', year: 2012, model:'KW1', license: 'TL63'});
+create (t:Truck {id: 64, name: 'T64', type: 'tractor', gvwr: 106000, make: 'Kenworth', year: 2016, model:'KW1', license: 'TL64'});
+create (t:Truck {id: 65, name: 'T65', type: 'tractor', gvwr: 106000, make: 'Kenworth', year: 2016, model:'KW1', license: 'TL65'});
+match (t:Truck), (s:Shipper)
+where t.id in [61, 62, 63, 64, 65] and s.id = 7
+create (s)-[r:Operates {name: s.name + '-[Operates]->' + t.name, year: 2022}]->(t);
+
+create (t:Truck {id: 66, name: 'T66', type: 'tractor', gvwr: 100000, make: 'Kenworth', year: 2015, model:'KW1', license: 'TL66'});
+create (t:Truck {id: 67, name: 'T67', type: 'tractor', gvwr: 102000, make: 'Peterbilt', year: 2012, model:'KW1', license: 'TL67'});
+create (t:Truck {id: 68, name: 'T68', type: 'tractor', gvwr: 106000, make: 'Kenworth', year: 2016, model:'KW1', license: 'TL68'});
+create (t:Truck {id: 69, name: 'T69', type: 'tractor', gvwr: 106000, make: 'Kenworth', year: 2016, model:'KW1', license: 'TL69'});
+create (t:Truck {id: 70, name: 'T70', type: 'tractor', gvwr: 103000, make: 'Peterbilt', year: 2011, model:'KW1', license: 'TL70'});
+match (t:Truck), (s:Shipper)
+where t.id in [66, 67, 68, 69, 70] and s.id = 8
+create (s)-[r:Operates {name: s.name + '-[Operates]->' + t.name, year: 2022}]->(t);
+
+create (t:Truck {id: 71, name: 'T71', type: 'dump', gvwr: 85000, make: 'Peterbilt', year: 2006, model:'KW1', license: 'TL71'});
+create (t:Truck {id: 72, name: 'T72', type: 'tractor', gvwr: 105000, make: 'Kenworth', year: 2007, model:'KW1', license: 'TL72'});
+create (t:Truck {id: 73, name: 'T73', type: 'dump', gvwr: 95000, make: 'Mack', year: 2004, model:'KW1', license: 'TL73'});
+create (t:Truck {id: 74, name: 'T74', type: 'tractor', gvwr: 105000, make: 'International', year: 2003, model:'KW1', license: 'TL74'});
+create (t:Truck {id: 75, name: 'T75', type: 'tractor', gvwr: 101000, make: 'Freightliner', year: 2009, model:'KW1', license: 'TL75'});
+create (t:Truck {id: 76, name: 'T76', type: 'tractor', gvwr: 103000, make: 'Peterbilt', year: 2011, model:'KW1', license: 'TL76'});
+create (t:Truck {id: 77, name: 'T77', type: 'tractor', gvwr: 100000, make: 'Kenworth', year: 2015, model:'KW1', license: 'TL77'});
+create (t:Truck {id: 78, name: 'T78', type: 'tractor', gvwr: 102000, make: 'Peterbilt', year: 2012, model:'KW1', license: 'TL78'});
+create (t:Truck {id: 79, name: 'T79', type: 'tractor', gvwr: 106000, make: 'Kenworth', year: 2016, model:'KW1', license: 'TL79'});
+create (t:Truck {id: 80, name: 'T80', type: 'tractor', gvwr: 101000, make: 'Freightliner', year: 2009, model:'KW1', license: 'TL80'});
+create (t:Truck {id: 81, name: 'T81', type: 'tractor', gvwr: 103000, make: 'Peterbilt', year: 2011, model:'KW1', license: 'TL81'});
+create (t:Truck {id: 82, name: 'T82', type: 'tractor', gvwr: 105000, make: 'Kenworth', year: 2005, model:'KW1', license: 'T82'});
+match (t:Truck), (s:Shipper)
+where t.id in [71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82] and s.id = 9
+create (s)-[r:Operates {name: s.name + '-[Operates]->' + t.name, year: 2022}]->(t);
+
+
+create (t:Truck {id: 83, name: 'T83', type: 'tractor', gvwr: 105000, make: 'Kenworth', year: 2007, model:'KW1', license: 'TL83'});
+create (t:Truck {id: 84, name: 'T84', type: 'dump', gvwr: 95000, make: 'Mack', year: 2004, model:'M1', license: 'TL84'});
+create (t:Truck {id: 85, name: 'T85', type: 'tractor', gvwr: 105000, make: 'International', year: 2003, model:'I1', license: 'TL85'});
+create (t:Truck {id: 86, name: 'T86', type: 'tractor', gvwr: 101000, make: 'Freightliner', year: 2009, model:'F1', license: 'TL86'});
+create (t:Truck {id: 87, name: 'T87', type: 'tractor', gvwr: 103000, make: 'Peterbilt', year: 2011, model:'P2', license: 'TL87'});
+create (t:Truck {id: 88, name: 'T88', type: 'tractor', gvwr: 100000, make: 'Kenworth', year: 2015, model:'KW1', license: 'TL88'});
+create (t:Truck {id: 89, name: 'T89', type: 'tractor', gvwr: 102000, make: 'Peterbilt', year: 2012, model:'P2', license: 'TL89'});
+create (t:Truck {id: 90, name: 'T90', type: 'tractor', gvwr: 106000, make: 'Kenworth', year: 2016, model:'KW1', license: 'TL90'});
+match (t:Truck), (s:Shipper)
+where t.id in [83, 84, 85, 86, 87, 88, 89, 90] and s.id = 10
+create (s)-[r:Operates {name: s.name + '-[Operates]->' + t.name, year: 2022}]->(t);
+
+
+match (t:Truck), (s:Shipper)
+where t.id in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] and s.id = 1
+create (t)-[r:OperatedBy {name: t.name + '-[OperatedBy]->' + s.name, year: 2022}]->(s);
+
+match (t:Truck), (s:Shipper)
+where t.id in [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25] and s.id = 2
+create (t)-[r:OperatedBy {name: t.name + '-[OperatedBy]->' + s.name, year: 2022}]->(s);
+
+match (t:Truck), (s:Shipper)
+where t.id in [26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40] and s.id = 3
+create (t)-[r:OperatedBy {name: t.name + '-[OperatedBy]->' + s.name, year: 2022}]->(s);
+
+match (t:Truck), (s:Shipper)
+where t.id in [41, 42, 43, 44, 45, 46, 47, 48, 49, 50] and s.id = 4
+create (t)-[r:OperatedBy {name: t.name + '-[OperatedBy]->' + s.name, year: 2022}]->(s);
+
+match (t:Truck), (s:Shipper)
+where t.id in [51, 52, 53, 54, 55, 56] and s.id = 5
+create (t)-[r:OperatedBy {name: t.name + '-[OperatedBy]->' + s.name, year: 2022}]->(s);
+
+match (t:Truck), (s:Shipper)
+where t.id in [57, 58, 59, 60] and s.id = 6
+create (t)-[r:OperatedBy {name: t.name + '-[OperatedBy]->' + s.name, year: 2022}]->(s);
+
+match (t:Truck), (s:Shipper)
+where t.id in [61, 62, 63, 64, 65] and s.id = 7
+create (t)-[r:OperatedBy {name: t.name + '-[OperatedBy]->' + s.name, year: 2022}]->(s);
+
+match (t:Truck), (s:Shipper)
+where t.id in [66, 67, 68, 69, 70] and s.id = 8
+create (t)-[r:OperatedBy {name: t.name + '-[OperatedBy]->' + s.name, year: 2022}]->(s);
+
+match (t:Truck), (s:Shipper)
+where t.id in [71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82] and s.id = 9
+create (t)-[r:OperatedBy {name: t.name + '-[OperatedBy]->' + s.name, year: 2022}]->(s);
+
+match (t:Truck), (s:Shipper)
+where t.id in [83, 84, 85, 86, 87, 88, 89, 90] and s.id = 10
+create (t)-[r:OperatedBy {name: t.name + '-[OperatedBy]->' + s.name, year: 2022}]->(s);
+
+create (c:HarvestCrew {id: 1, name: 'MFarms_Harvest_Crew1'});
+create (c:HarvestCrew {id: 2, name: 'MFarms_Harvest_Crew2'});
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 1 and c.id = 1
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 1 and c.id = 2
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+
+create (c:HarvestCrew {id: 3, name: 'DFarms_Harvest_Crew1'});
+create (c:HarvestCrew {id: 4, name: 'DFarms_Harvest_Crew2'});
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 2 and c.id = 3
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 2 and c.id = 4
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+
+create (c:HarvestCrew {id: 5, name: 'GFarms_Harvest_Crew1'});
+create (c:HarvestCrew {id: 6, name: 'GFarms_Harvest_Crew2'});
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 3 and c.id = 5
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 3 and c.id = 6
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+
+create (c:HarvestCrew {id: 7, name: 'BFarms_Harvest_Crew1'});
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 4 and c.id = 7
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+
+create (c:HarvestCrew {id: 8, name: 'SCustom_Harvest_Crew1'});
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 5 and c.id = 8
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+
+create (c:HarvestCrew {id: 9, name: 'NCustom_Harvest_Crew1'});
+create (c:HarvestCrew {id: 10, name: 'NCustom_Harvest_Crew2'});
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 6 and c.id = 9
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 6 and c.id = 10
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+
+create (c:HarvestCrew {id: 11, name: 'JFarms_Harvest_Crew1'});
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 7 and c.id = 11
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+
+create (c:HarvestCrew {id: 12, name: 'TCustom_Harvest_Crew1'});
+create (c:HarvestCrew {id: 13, name: 'TCustom_Harvest_Crew2'});
+create (c:HarvestCrew {id: 14, name: 'TCustom_Harvest_Crew3'});
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 8 and c.id = 12
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 8 and c.id = 13
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 8 and c.id = 14
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+
+create (c:HarvestCrew {id: 15, name: 'CFarms_Harvest_Crew1'});
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 9 and c.id = 15
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+
+create (c:HarvestCrew {id: 16, name: 'RFarms_Harvest_Crew1'});
+match (c:HarvestCrew), (h:Harvester)
+where h.id = 10 and c.id = 16
+create 
+    (h)-[r1:Uses {name: h.name + '-[Uses]->' + c.name}]->(c),
+    (c)-[r2:UsedBy {name: c.name + '-[UsedBy]->' + h.name}]->(h);
+
+match (c:HarvestCrew), (f:Field)
+where c.id = 13 and f.id = 40
+create 
+    (c)-[r1:Harvested {name: c.name + '-[Harvested]->' + f.name, harvest_start_date: date("2021-08-01"), harvest_complete_date: ''}]->(f),
+    (f)-[r2:HarvestedBy {name: f.name + '-[HarvestedBy]->' + c.name, harvest_start_date: date("2021-08-01"), harvest_complete_date: ''}]->(c);
+
+
+create (c:Crop {id: 1, name: 'Wheat - Hard Red Winter', type: 'wheat', class: 'hard red', season: 'winter'});
+create (c:Crop {id: 2, name: 'Wheat - Soft White Winter', type: 'wheat', class: 'soft white', season: 'winter'});
+create (c:Crop {id: 3, name: 'Wheat - Hard Red Spring', type: 'wheat', class: 'hard red', season: 'spring'});
+create (c:Crop {id: 4, name: 'Wheat - Soft White Spring', type: 'wheat', class: 'soft white', season: 'spring'});
+create (c:Crop {id: 5, name: 'Lentils', type: 'lentils', class: 'lentils', season: 'spring'});
+create (c:Crop {id: 6, name: 'Beans - Garbanzo', type: 'beans', class: 'garbanzo', season: 'spring'});
+create (c:Crop {id: 7, name: 'Peas - Dried Green', type: 'peas', class: 'dried green', season: 'spring'});
+
+match (c:Crop), (f:Field)
+where c.id = 1 and f.id in [1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57]
+create 
+    (c)-[:PlantedIn {name: c.name + '-[PlantedIn]->' + f.name, cropyear: 2022}]->(f),
+    (f)-[:PlantedWith {name: f.name + '-[PlantedIn]->' + c.name, cropyear: 2022}]->(c);
+
+match (c:Crop), (f:Field)
+where c.id = 2 and f.id in [2, 6, 10, 14, 18, 22, 26, 30, 34, 38, 42, 46, 50, 54, 58]
+create 
+    (c)-[:PlantedIn {name: c.name + '-[PlantedIn]->' + f.name, cropyear: 2022}]->(f),
+    (f)-[:PlantedWith {name: f.name + '-[PlantedIn]->' + c.name, cropyear: 2022}]->(c);
+
+match (c:Crop), (f:Field)
+where c.id = 3 and f.id in [3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 59]
+create 
+    (c)-[:PlantedIn {name: c.name + '-[PlantedIn]->' + f.name, cropyear: 2022}]->(f),
+    (f)-[:PlantedWith {name: f.name + '-[PlantedIn]->' + c.name, cropyear: 2022}]->(c);    
+
+match (c:Crop), (f:Field)
+where c.id = 4 and f.id in [4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60]
+create 
+    (c)-[:PlantedIn {name: c.name + '-[PlantedIn]->' + f.name, cropyear: 2022}]->(f),
+    (f)-[:PlantedWith {name: f.name + '-[PlantedIn]->' + c.name, cropyear: 2022}]->(c); 
+
+match (g:Grower)-[r:Farms]->(f:Field), (s:Shipper)
+where g.name = 'MFarms' and s.name = 'MShipper'
+create 
+    (s)-[:ShipsFor {name: s.name + '-[ShipsFor]->' + f.name, cropyear: 2022}]->(f),
+    (f)-[:ShippedBy {name: f.name + '-[ShippedBy]->' + s.name, cropyear: 2022}]->(s);
+
+create (e:Elevator {id: 1, name: 'Lewis Clark Terminal', state: 'ID', location: "Lewiston"});
+create (e:Elevator {id: 2, name: 'Columbia Grain', state: 'WA', location: "Central Ferry"});
+create (e:Elevator {id: 3, name: 'Central Ferry Terminal', state: 'WA', location: "Central Ferry"});
+create (e:Elevator {id: 4, name: 'Snake River Terminal PNW', state: 'WA', location: "Almota"});
+create (e:Elevator {id: 5, name: 'Dusty Elevator', state: 'WA', location: "Dusty"});
+
+match (g:Grower), (e:Elevator)
+create 
+    (g)-[:HasAccount {name: g.name + '-[HasAccount]->' + e.name}]->(e),
+    (e)-[:HasAccount {name: e.name + '-[HasAccount]->' + g.name}]->(g);
+
+    

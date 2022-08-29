@@ -1,0 +1,41 @@
+{
+  "name": "harvest-elevator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slartib/harvest-elevator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slartib/harvest-elevator/issues"
+  },
+  "homepage": "https://github.com/slartib/harvest-elevator#readme",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*test.js",
+      "README.md",
+      "package.json"
+    ],
+    "delay": 2000
+  },
+  "devDependencies": {
+    "jest": "^29.0.1",
+    "nodemon": "^2.0.19",
+    "supertest": "^6.2.4"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongodb": "^4.9.0",
+    "node-rdkafka": "^2.13.0"
+  }
+}

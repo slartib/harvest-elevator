@@ -1,33 +1,63 @@
 {
-    "id": "<ticket-id>",
-    "elevator-id": "<elevator-id",
-    "datetime": "<datetime>",
+    "corporation":
+    {
+        "id": "<corporation id>",
+        "name": "<corporation name>",
+        "elevator":
+        {
+            "id": "<elevator-id",
+            "name": "<elevator-name>"
+        }
+    },    
+    "weight-sheet": "<weight-sheet number>",
+    "timestamp":
+    {
+        "in": "<datetime>",
+        "out": "<datetime>"
+    },
     "load":
     {
-        "crop-class": "crop-class (e.g. sww, srw, sws, srs, hrw, hrs, etc)",
-        "gross": "<gross-weight>",
-        "tare": "<tare-weight>",
-        "net": "<net-weight",
-        "grower":
+        "id": "<load id>",
+        "grain": "<gross grain type (e.g. wheat, barley, oats)>",
+        "grain-class": "grain-class (e.g. sww, srw, sws, srs, hrw, hrs, etc)",
+        "bol": "<bill of lading number>",
+        "shipper":
         {
-            "id": "<grower-id>",
-            "grower-field-id": "<grower-field-id"
-        },
-        "truck":
-        {
-            "license": "<truck-license>",
-            "bol-number": "<bill of lading number>",
-            "driver":
+            "id": "<shipper id>",
+            "name": "<shipper name>",
+            "truck":
             {
-                "fname": "<drivers first name>",
-                "lname": "<drivers last name>"
+                "id": "<truck id>"
             }
         },
+        "for":
+        {
+            "producer": 
+            {
+                "id": "<producer or grower id>",
+                "name": "<producer or grower name>",
+                "share": "<producer share>" 
+            },
+            "landlord":
+            {
+                "id": "<landlord id>",
+                "name": "<landlord share>",
+                "share": "<landlord share>"
+            }
+        },
+        "fsa": "<fsa number>",
+        "lot": "<lot number>",
         "quality":
         {
             "moisture": "decimal value",
             "protein": "decimal value",
             "bushel-weight": "decimal value"
-        }            
+        },
+        "weight":
+        {  
+            "gross": "<gross-weight>",
+            "tare": "<tare-weight>",
+            "net": "<net-weight"          
+        }
     }
 }

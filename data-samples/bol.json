@@ -1,0 +1,59 @@
+{
+    "bol-number": "<bill of lading number>",
+    "miles": "<miles one way>",
+    "timestamp": "<timestamp>",
+    "origin": "<producer or origin elevator>",
+    "landlord": "<landlord>",
+    "destination": "<destination>",
+    "farm": 
+    {
+        "fsa": "<fsa number>",
+        "lot": "<lot number>",
+        "grain": "<grain type>" 
+    },
+    "truck":
+    {
+        "id": "<truck id>"
+    },
+    "trailer":
+    {
+        "id": "<trailer id>"
+    },
+    "driver":
+    {
+        "id": "<driver id>",
+        "name":
+        {
+            "fname": "<first name>",
+            "lname": "<last name>"
+        }
+    },
+    "shipper":
+    {
+        "id": "<shipper id>",
+        "name": "<shipper name",
+        "address":
+        {
+            "address1": "<address 1>",
+            "address2": "<address 2>",
+            "city": "<city>",
+            "state": "<state>",
+            "zip": "<zip>"                    
+        }
+    },
+    "weight":
+    {
+        "origin": 
+        {
+            "gross": "<origin gross weight>",
+            "tare": "<origin tare weight>",
+            "net": "<origin net weight"
+        },
+        "destination": 
+        {
+            "gross": "<destination gross weight>",
+            "tare": "<destination tare weight>",
+            "net": "<destination net weight"
+        }
+    }
+}

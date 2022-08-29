@@ -1,0 +1,13 @@
+{
+    "id": "<shipper id>",
+    "name": "<shipper name>",
+    "trucks": 
+    [
+        {
+            "id": "<truck id>",
+            "license": "<truck license plate number>",
+            "grvw": "<gross vehicle weight>",
+            "dot_number": "<DOT number>"
+        }
+    ]
+}

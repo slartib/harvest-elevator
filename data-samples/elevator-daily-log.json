@@ -1,0 +1,35 @@
+{
+    "id": "<elevator id>",
+    "name": "<elevator name>",
+    "corporation": "<elevator owning corporation>",
+    "date": "<date of log>",
+    "loads-in":
+    [
+        {
+            "bol":
+            {
+                "number": "<bol number>",
+                "shipper": 
+                {
+                    "id": "<shipper id>",
+                    "name": "<shipper name>"
+                },
+                "truck":
+                {
+                    "id": "<truck id>"
+                }
+            },
+            "timestamps":
+            {
+                "in": "<datetime>",
+                "out": "<datetime>"
+            },
+            "weight":
+            {
+                "gross": "<gross weight>",
+                "tare": "<tare weight>",
+                "net": "<net weight>"
+            }
+        }
+    ]
+}

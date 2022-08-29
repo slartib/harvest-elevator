@@ -1,0 +1,7 @@
+{
+    "id": "<elevator id>",
+    "name": "<elevator name>",
+    "corporation": "<corporation name>",
+    "location": "<elevator location>",
+    "state": "<state>"
+}
